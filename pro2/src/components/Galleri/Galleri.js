@@ -8,9 +8,6 @@ class Galleri extends Component {
         super()
         
         this.state = {
-            bilder: [],
-            tekst: [],
-            lyd: [],
             currentPage: 0,  
         }
         this.getRegisterFile()
