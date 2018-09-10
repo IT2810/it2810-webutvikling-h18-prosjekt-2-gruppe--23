@@ -17,10 +17,9 @@ class Galleri extends Component {
     }
 
     getRegisterFile()  {
-        axios.get('/json/txt.json')
+        axios.get('/json/RegisterFile.json')
         .then(response => {
             console.log(response.data);
-            this.setState({ bilder: response.data.bilder.hoytider, tekst: response.data.text.jokes})
       })
       .catch(error => {
         console.log(error);
@@ -32,7 +31,7 @@ class Galleri extends Component {
         console.log(this.state)
         return (
             <div>
-            
+                <Bilde></Bilde>
             </div>
         );
     }

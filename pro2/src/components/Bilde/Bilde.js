@@ -6,15 +6,18 @@ class Bilde extends Component {
         super()
         
         this.state = {
-            bilde:  
+            tekst: ""  
         }
+
+        this.getPicture();
     }
 
-    getPicture(props)  {
-        axios.get('/BilderP2/' + this.props.navn + '.svg')
+    getPicture()  {
+        axios.get('/Tekst/riddle0.json')
         .then(response => {
-            console.log(response.data);
-            this.setState({ bilder: response.data.bilder.hoytider, tekst: response.data.text.jokes})
+            //console.log(response.data);
+            this.setState({tekst : response.data })
+            console.log(this.state.tekst)
       })
       .catch(error => {
         console.log(error);
@@ -24,6 +27,9 @@ class Bilde extends Component {
     render() {
         console.log(this.state)
         return (
+            <div>
+                <p> {this.state.tekst.text} </p>
+            </div>
         );
     }
 }
