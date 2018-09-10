@@ -16,8 +16,8 @@ class Bilde extends Component {
         axios.get('/Tekst/riddle0.json')
         .then(response => {
             //console.log(response.data);
-            this.setState({tekst : response.data })
-            console.log(this.state.tekst)
+            this.setState({tekst : response.data.text })
+            console.log(this.state)
       })
       .catch(error => {
         console.log(error);
@@ -28,7 +28,7 @@ class Bilde extends Component {
         console.log(this.state)
         return (
             <div>
-                <p> {this.state.tekst.text} </p>
+                <p> {this.state.tekst} </p>
             </div>
         );
     }

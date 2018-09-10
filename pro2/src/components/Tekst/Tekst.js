@@ -4,20 +4,18 @@ import axios from 'axios';
 class Tekst extends Component {
     constructor(props) {
         super()
-        
+
         this.state = {
-            tekst: ""  
+            tekst: "",  
         }
 
-        this.getPicture();
+        this.getText(props.name);
     }
 
-    getText()  {
-        axios.get('/Tekst/riddle0.json')
+    getText(props)  {
+        axios.get('/Tekst/' + props + '.json')
         .then(response => {
-            //console.log(response.data);
-            this.setState({tekst : response.data })
-            console.log(this.state.tekst)
+            this.setState({tekst : response.data.text })
       })
       .catch(error => {
         console.log(error);
@@ -25,10 +23,9 @@ class Tekst extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
-            <div>
-                <p> {this.state.tekst.text} </p>
+            <div className = "jsontxt">
+                <h3> {this.state.tekst} </h3>
             </div>
         );
     }

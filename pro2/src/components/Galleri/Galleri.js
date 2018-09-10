@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Bilde from './../Bilde/Bilde'
+import Tekst from './../Tekst/Tekst'
 
 class Galleri extends Component {
     constructor() {
@@ -31,7 +31,7 @@ class Galleri extends Component {
         console.log(this.state)
         return (
             <div>
-                <Bilde></Bilde>
+                <Tekst name="riddle2"></Tekst>
             </div>
         );
     }
