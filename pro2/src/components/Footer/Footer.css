@@ -1,0 +1,9 @@
+.Footer{
+  height: 50px;
+  background-color: #F7A66D;
+  padding: 5px;
+}
+
+.Footer-text{
+  font-size: 0.7em;
+}
