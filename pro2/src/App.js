@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import Footer from './components/Footer/Footer';
 import './App.css'
-import Galleri from './components/Galleri/Galleri'
+import Gallery from './components/Gallery/Gallery'
+import Header from './components/Header/Header'
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Galleri></Galleri>
-        <Footer></Footer>
+        <div className="wrapper">
+          <Header></Header>
+          <Gallery></Gallery>
+          <Footer></Footer>
+        </div>
       </div>
     );
   }

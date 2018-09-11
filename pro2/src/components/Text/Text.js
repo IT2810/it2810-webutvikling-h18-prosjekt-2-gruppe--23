@@ -1,34 +1,36 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Tekst extends Component {
+class Text extends Component {
     constructor(props) {
         super()
 
         this.state = {
-            tekst: "",  
+            text: "",  
         }
 
         this.getText(props.name);
     }
 
+
     getText(props)  {
-        axios.get('/Tekst/' + props + '.json')
+        axios.get('/TextFile/' + props + '.json')
         .then(response => {
-            this.setState({tekst : response.data.text })
+            this.setState({text : response.data.text })
       })
       .catch(error => {
         console.log(error);
       })
     }
 
+
     render() {
         return (
             <div className = "jsontxt">
-                <h3> {this.state.tekst} </h3>
+                <p> {this.state.text} </p>
             </div>
         );
     }
 }
 
-export default Tekst;
+export default Text;
