@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 class Bilde extends Component {
     constructor(props) {
         super()
-        
+
         this.state = {
-            tekst: ""  
+            pictures: ""
         }
 
-        this.getPicture();
+        this.getImg(props.name);
     }
 
-    getPicture()  {
-        axios.get('/Tekst/riddle0.json')
-        .then(response => {
-            //console.log(response.data);
-            this.setState({tekst : response.data.text })
-            console.log(this.state)
-      })
-      .catch(error => {
-        console.log(error);
-      })
-    }
+    getImg = async (props) => {
+          try {
+            const picture = await axios.get('/BilderP2/' + props + '.svg');
+            this.setState({
+              pictures: picture.data
+            })
+          }
+          catch (error) {
+            console.error(error);
+          }
+        }
 
     render() {
         console.log(this.state)
-        return (
-            <div>
-                <p> {this.state.tekst} </p>
-            </div>
-        );
+        return (  <div className = "pictureName">
+                <div dangerouslySetInnerHTML={{__html: this.state.pictures}}></div>
+          </div>
+        )
     }
 }
 

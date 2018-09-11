@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Text from '../Text/Text'
+import Bilde from '../Bilde/Bilde'
 import TabContainer from '../Tab/TabContainer';
 import './Gallery.css'
 
 class Gallery extends Component {
     constructor() {
         super()
-        
+
         this.state = {
-            currentPage: 0,  
+            currentPage: 0,
         }
         this.getRegisterFile()
     }
@@ -36,9 +37,9 @@ class Gallery extends Component {
                     <TabContainer></TabContainer>
                 </div>
 
-                <div className="gridContainer">   
+                <div className="gridContainer">
                     <div className="galleryPic">
-                        <p> Her kommer bildet som komponent</p>
+                        <Bilde name="sc"></Bilde>
                     </div>
                     <div className="galleryText">
                         <Text name="cliche0"></Text>
