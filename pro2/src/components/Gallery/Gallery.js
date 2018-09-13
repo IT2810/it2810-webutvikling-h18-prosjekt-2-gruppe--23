@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Text from '../Text/Text'
 import TabContainer from '../Tab/TabContainer';
+import Sound from '../Sound/Sound';
 import './Gallery.css'
 
 class Gallery extends Component {
     constructor() {
         super()
-        
+
         this.state = {
-            currentPage: 0,  
+            currentPage: 0,
         }
         this.getRegisterFile()
     }
@@ -36,7 +37,7 @@ class Gallery extends Component {
                     <TabContainer></TabContainer>
                 </div>
 
-                <div className="gridContainer">   
+                <div className="gridContainer">
                     <div className="galleryPic">
                         <p> Her kommer bildet som komponent</p>
                     </div>
@@ -44,7 +45,7 @@ class Gallery extends Component {
                         <Text name="cliche0"></Text>
                     </div>
                     <div className="gallerySound">
-                        <p> Her kommer lyden som komponent</p>
+                        <Sound></Sound>
                     </div>
                 </div>
 
