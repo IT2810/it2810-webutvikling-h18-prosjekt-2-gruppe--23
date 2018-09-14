@@ -16,3 +16,13 @@
     border-color: #B3C4C6;
     margin: auto;
 }
+
+li {
+    list-style-type: none;
+}
+
+.radioHolder {
+    text-align: left;
+    width: 30%;
+    margin: auto;
+}

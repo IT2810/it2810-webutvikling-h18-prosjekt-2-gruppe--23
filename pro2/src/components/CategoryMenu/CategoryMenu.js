@@ -3,6 +3,9 @@ import CategoryContent from './CategoryContent';
 import './CategoryMenu.css';
 
 class CategoryMenu extends Component {
+    
+    //Source: https://www.youtube.com/watch?v=Mo2_UPkZjJU
+    
     constructor(props){
         super();
 
