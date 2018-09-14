@@ -1,0 +1,18 @@
+.menuButton {
+    background-color: #ED7157;
+    border: 1px solid;
+    border-color: #ffffff;
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+
+}
+
+.categoryContent {
+    width: 50%;
+    border: 1px solid;
+    border-color: #B3C4C6;
+    margin: auto;
+}
