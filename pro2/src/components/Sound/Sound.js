@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 
-let url = "Lyder/Feelings/1.mp3";
-//let url = "Lyder/" + category + "/" + tabnumber + ".mp3";
+let category = "Feelings";
+let tabnumber = 1;
+let url = "Lyder/" + category + "/" + tabnumber + ".mp3";
 
 class Sound extends Component{
 
