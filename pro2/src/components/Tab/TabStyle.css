@@ -7,11 +7,11 @@
 }
 
 .tab:hover {
-    background-color: rgb(245, 211, 187);
+    background-color:rgb(225, 243, 245);
 }
 
 .tab:focus {
-    background-color: rgb(245, 211, 187);
+    background-color: rgb(225, 243, 245);
 }
 
 
@@ -22,6 +22,7 @@
     margin: auto;
     margin-top: 10px;
     width: 70%;
+    
 }
 
 .tabText {
