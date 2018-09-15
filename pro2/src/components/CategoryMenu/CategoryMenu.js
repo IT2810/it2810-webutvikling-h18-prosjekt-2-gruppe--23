@@ -15,7 +15,6 @@ class CategoryMenu extends Component {
     }
 
     toggleDiv = () => {
-        console.log("Kommer inn hit")
         const { showMenu} = this.state;
         this.setState( { showMenu : !showMenu})
     }
@@ -23,7 +22,7 @@ class CategoryMenu extends Component {
     render() {
         return( 
             <div>
-                <button className="menuButton" onClick={this.toggleDiv}>Kategorier</button>
+                <button className="menuButton" onClick={this.toggleDiv}><h1>Kategorier</h1></button>
                 {this.state.showMenu && <CategoryContent></CategoryContent>}
             </div>
         )

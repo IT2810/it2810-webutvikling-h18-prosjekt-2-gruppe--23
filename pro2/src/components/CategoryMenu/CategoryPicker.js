@@ -31,6 +31,7 @@ class CategoryPicker extends Component {
                     <ul>
 
                         <li>
+                            
                             <label>
                                 <input
                                 className="radioButtons"
