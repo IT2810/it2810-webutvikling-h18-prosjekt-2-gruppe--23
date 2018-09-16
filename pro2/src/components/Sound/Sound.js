@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
 
-let category = "Feelings";
-let tabnumber = 1;
-let url = "Lyder/" + category + "/" + tabnumber + ".mp3";
-
 class Sound extends Component{
+  constructor(props) {
+        super()
+
+        this.state = {
+            sound: "",
+        }
+    }
 
   render(){
+    let url = "Lyder/" + this.props.category + "/" + this.props.tabnr + ".mp3";
     return (
       <div className="soundContainer">
         <audio controls>

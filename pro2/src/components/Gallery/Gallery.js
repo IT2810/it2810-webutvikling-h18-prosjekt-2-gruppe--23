@@ -28,7 +28,7 @@ class Gallery extends Component {
     render() {
         //console.log(this.state)
         return (
-            <div className="content"> 
+            <div className="content">
                 <div className="galleryCategories">
                     <CategoryMenu></CategoryMenu>
                 </div>
@@ -38,11 +38,7 @@ class Gallery extends Component {
                 </div>
 
 
-                <div className="gridContainer">  
-
-
-
-
+                <div className="gridContainer">
                     <div className="galleryPic">
                         <p> Her kommer bildet som komponent</p>
                     </div>
@@ -50,9 +46,9 @@ class Gallery extends Component {
                     <div className="galleryText">
                         <Text name="cliche0"></Text>
                     </div>
-                    
+
                     <div className="gallerySound">
-                        <Sound></Sound>
+                        <Sound category="Animals" tabnr="1"></Sound>
                     </div>
 
                 </div>
