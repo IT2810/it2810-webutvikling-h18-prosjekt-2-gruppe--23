@@ -1,4 +1,12 @@
 .Header {
-    border: 1px solid;
-    border-color: #000000;
+    background-color: #B3C4C6;
+    height: 50px;
+    margin: 0;
+}
+
+.Header > p {
+    margin: auto;
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 10px;
 }
