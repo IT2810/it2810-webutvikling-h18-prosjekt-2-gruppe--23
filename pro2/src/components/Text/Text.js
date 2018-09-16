@@ -2,19 +2,30 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class Text extends Component {
-    constructor(props) {
+    constructor({category, tabnr}) {
         super()
 
         this.state = {
             text: "",  
         }
 
-        this.getText(props.name);
+        this.getText({category, tabnr});
     }
 
+    componentDidUpdate(props) {
+        this.getText(props)
+      }
+  
+      shouldComponentUpdate(props, newProps) {
+        if( props.tabnr === newProps.tabnr) {
+          return false;
+        }
+        return true;
+      }
 
-    getText(props)  {
-        axios.get('/TextFile/' + props + '.json')
+
+    getText({category, tabnr})  {
+        axios.get('/TextFile/' + category + "/" + tabnr + '.json')
         .then(response => {
             this.setState({text : response.data.text })
       })
