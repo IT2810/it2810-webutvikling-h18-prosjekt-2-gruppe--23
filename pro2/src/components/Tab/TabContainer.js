@@ -4,11 +4,11 @@ import Tab from './Tab.js';
 class TabContainer extends Component {
     render() {
         return (
-            <div className="tabContainer"> 
-                <Tab number="1"/>
-                <Tab number="2"/>
-                <Tab number="3"/>
-                <Tab number="4"/>
+            <div className="tabContainer">
+                <Tab id="tab1" number="1"/>
+                <Tab id="tab2" number="2"/>
+                <Tab id="tab3" number="3"/>
+                <Tab id="tab4" number="4"/>
             </div>
         )
     }
