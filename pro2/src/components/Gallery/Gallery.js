@@ -1,45 +1,58 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import Text from '../Text/Text'
 import Bilde from '../Bilde/Bilde'
-import TabContainer from '../Tab/TabContainer';
+//import TabContainer from '../Tab/TabContainer';
 import './Gallery.css'
+import Tab from '../Tab/Tab'
 
 class Gallery extends Component {
-    constructor() {
+
+    constructor(props) {
         super()
 
         this.state = {
-            currentPage: 0,
+            tabs: 1,
         }
-        this.getRegisterFile()
+
+        this.handleTabs = this.handleTabs.bind(this)
+    }
+    handleTabs (val){
+      console.log('state før handle'+val)
+      this.setState({tabs: val});
+      console.log('state etter handle' + this.state.tabs)
+      //getImage();
+
     }
 
-    getRegisterFile()  {
-        axios.get('/json/RegisterFile.json')
-        .then(response => {
-            //console.log(response.data);
-      })
-      .catch(error => {
-        console.log(error);
-      })
-    }
+    /*getImage(){
+        ReactDOM.render(<Bilde category={"Superheroes"} tabnr={this.state.tabs}></Bilde>,
+        getElementById('pic'))
+    }*/
 
     render() {
-        //console.log(this.state)
+        console.log(this.state.tabs)
+        let tall = this.state.tabs;
+        console.log('tal ='+tall)
+        //console.log(superheroes[currentPage])
         return (
             <div className="content">
+            <div id = "test"></div>
                 <div className="galleryCategories">
                     <p> Her kommer dropdown for kategorier som komponent</p>
                 </div>
-
                 <div className="galleryTab">
-                    <TabContainer></TabContainer>
+                <div className="tabContainer">
+                    <Tab id="tab1" oClick={()=> this.handleTabs(1)}number="1"/>
+                    <Tab id="tab2" oClick={()=> this.handleTabs(2)}number="2"/>
+                    <Tab id="tab3" oClick={()=> this.handleTabs(3)}number="3"/>
+                    <Tab id="tab4" oClick={()=> this.handleTabs(4)}number="4"/>
+                </div>
                 </div>
 
                 <div className="gridContainer">
-                    <div className="galleryPic">
-                        <Bilde name="sc"></Bilde>
+                    <div id="pic" className="galleryPic">
+                    <Bilde category="Superheroes" tabnr={tall}></Bilde>
                     </div>
                     <div className="galleryText">
                         <Text name="cliche0"></Text>
@@ -48,8 +61,8 @@ class Gallery extends Component {
                         <p> Her kommer lyden som komponent</p>
                     </div>
                 </div>
-
             </div>
+
         );
     }
 }
