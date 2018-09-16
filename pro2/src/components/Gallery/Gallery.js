@@ -39,7 +39,9 @@ class Gallery extends Component {
         //console.log(superheroes[currentPage])
         return (
             <div className="content">
+
             <div id = "test"></div>
+
                 <div className="galleryCategories">
                     <CategoryMenu></CategoryMenu>
                 </div>
@@ -61,9 +63,9 @@ class Gallery extends Component {
                     <div className="galleryText">
                         <Text name="cliche0"></Text>
                     </div>
-                    
+
                     <div className="gallerySound">
-                        <Sound></Sound>
+                        <Sound category="Animals" tabnr="1"></Sound>
                     </div>
 
                 </div>
