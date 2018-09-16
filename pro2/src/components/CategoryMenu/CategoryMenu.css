@@ -1,0 +1,76 @@
+.menuButton {
+    background-color: #ED7157;
+    border: 1px solid;
+    border-color: #ffffff;
+    width: 50%;
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 10px;
+
+}
+
+.categoryContent {
+    width: 50%;
+    border: 1px solid;
+    border-color: #B3C4C6;
+    margin: auto;
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.categoryContent > b {
+    margin-left: 30px;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+
+}
+
+.catPicture, .catText, .catSound {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 20%
+}
+
+
+@media only screen and (max-width: 1025px) {
+    .catPicture, .catText, .catSound {
+        width: 100%;
+        margin-left: 20px;
+
+    }
+    .menuButton {
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 770px) {
+    .menuButton {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .categoryContent {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .catPicture, .catText, .catSound {
+        width: 100%;
+        margin-left: 20px;
+
+    }
+    
+    .menuButton {
+        font-size: 10px;
+    }
+}

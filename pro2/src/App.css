@@ -2,3 +2,9 @@
   text-align: center;
 }
 
+.appContent {
+  min-height: calc(100vh - 70px);
+}
+.stickyFooter {
+  height: 50px;
+}

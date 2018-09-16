@@ -1,17 +1,17 @@
 .tab {
-    background-color: #F7A66D;
+    background-color: #B3C4C6;
     border: 1px solid;
-    border-color: #0000005b;
+    border-color: #ffffff;
     width: auto;
 
 }
 
 .tab:hover {
-    background-color: rgb(245, 211, 187);
+    background-color:rgb(225, 243, 245);
 }
 
 .tab:focus {
-    background-color: rgb(245, 211, 187);
+    background-color: rgb(225, 243, 245);
 }
 
 
@@ -19,13 +19,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 10px;
-    margin-left: 20px;
+    margin: auto;
     margin-top: 10px;
     width: 70%;
+    
 }
 
 .tabText {
-    color: rgb(29, 29, 29);
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 770px) {

@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 //import axios from 'axios';
 import Text from '../Text/Text'
 import Bilde from '../Bilde/Bilde'
-//import TabContainer from '../Tab/TabContainer';
 import './Gallery.css'
 import Tab from '../Tab/Tab'
+import Sound from '../Sound/Sound';
+import CategoryMenu from '../CategoryMenu/CategoryMenu';
+
 
 class Gallery extends Component {
 
@@ -17,12 +19,12 @@ class Gallery extends Component {
 
         this.handleTabs = this.handleTabs.bind(this)
     }
+  
     handleTabs (val){
       console.log('state før handle'+val)
       this.setState({tabs: val});
       console.log('state etter handle' + this.state.tabs)
       //getImage();
-
     }
 
     /*getImage(){
@@ -39,7 +41,7 @@ class Gallery extends Component {
             <div className="content">
             <div id = "test"></div>
                 <div className="galleryCategories">
-                    <p> Her kommer dropdown for kategorier som komponent</p>
+                    <CategoryMenu></CategoryMenu>
                 </div>
                 <div className="galleryTab">
                 <div className="tabContainer">
@@ -53,13 +55,17 @@ class Gallery extends Component {
                 <div className="gridContainer">
                     <div id="pic" className="galleryPic">
                     <Bilde category="Superheroes" tabnr={tall}></Bilde>
+
                     </div>
+
                     <div className="galleryText">
                         <Text name="cliche0"></Text>
                     </div>
+                    
                     <div className="gallerySound">
-                        <p> Her kommer lyden som komponent</p>
+                        <Sound></Sound>
                     </div>
+
                 </div>
             </div>
 
