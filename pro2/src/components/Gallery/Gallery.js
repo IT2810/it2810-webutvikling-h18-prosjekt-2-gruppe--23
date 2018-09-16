@@ -19,7 +19,7 @@ class Gallery extends Component {
 
         this.handleTabs = this.handleTabs.bind(this)
     }
-  
+
     handleTabs (val){
       console.log('state før handle'+val)
       this.setState({tabs: val});
@@ -35,7 +35,7 @@ class Gallery extends Component {
     render() {
         console.log(this.state.tabs)
         let tall = this.state.tabs;
-        console.log('tal ='+tall)
+        console.log('tall ='+tall)
         //console.log(superheroes[currentPage])
         return (
             <div className="content">
@@ -65,7 +65,7 @@ class Gallery extends Component {
                     </div>
 
                     <div className="gallerySound">
-                        <Sound category="Animals" tabnr="1"></Sound>
+                        <Sound category="Animals" tabnr={tall}></Sound>
                     </div>
 
                 </div>
