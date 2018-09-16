@@ -1,50 +1,61 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import Text from '../Text/Text'
-import TabContainer from '../Tab/TabContainer';
-import Sound from '../Sound/Sound';
+import Bilde from '../Bilde/Bilde'
 import './Gallery.css'
+import Tab from '../Tab/Tab'
+import Sound from '../Sound/Sound';
 import CategoryMenu from '../CategoryMenu/CategoryMenu';
 
+
 class Gallery extends Component {
-    constructor() {
+
+    constructor(props) {
         super()
 
         this.state = {
-            currentPage: 0,
+            tabs: 1,
         }
-        this.getRegisterFile()
+
+        this.handleTabs = this.handleTabs.bind(this)
     }
-    //Retrieves the Registerfile, which holds an array with categories and picutes/text
-    getRegisterFile()  {
-        axios.get('/json/RegisterFile.json')
-        .then(response => {
-      })
-      .catch(error => {
-        console.log(error);
-      })
+  
+    handleTabs (val){
+      console.log('state før handle'+val)
+      this.setState({tabs: val});
+      console.log('state etter handle' + this.state.tabs)
+      //getImage();
     }
 
+    /*getImage(){
+        ReactDOM.render(<Bilde category={"Superheroes"} tabnr={this.state.tabs}></Bilde>,
+        getElementById('pic'))
+    }*/
+
     render() {
-        //console.log(this.state)
+        console.log(this.state.tabs)
+        let tall = this.state.tabs;
+        console.log('tal ='+tall)
+        //console.log(superheroes[currentPage])
         return (
-            <div className="content"> 
+            <div className="content">
+            <div id = "test"></div>
                 <div className="galleryCategories">
                     <CategoryMenu></CategoryMenu>
                 </div>
-
                 <div className="galleryTab">
-                    <TabContainer></TabContainer>
+                <div className="tabContainer">
+                    <Tab id="tab1" oClick={()=> this.handleTabs(1)}number="1"/>
+                    <Tab id="tab2" oClick={()=> this.handleTabs(2)}number="2"/>
+                    <Tab id="tab3" oClick={()=> this.handleTabs(3)}number="3"/>
+                    <Tab id="tab4" oClick={()=> this.handleTabs(4)}number="4"/>
+                </div>
                 </div>
 
+                <div className="gridContainer">
+                    <div id="pic" className="galleryPic">
+                    <Bilde category="Superheroes" tabnr={tall}></Bilde>
 
-                <div className="gridContainer">  
-
-
-
-
-                    <div className="galleryPic">
-                        <p> Her kommer bildet som komponent</p>
                     </div>
 
                     <div className="galleryText">
@@ -56,8 +67,8 @@ class Gallery extends Component {
                     </div>
 
                 </div>
-
             </div>
+
         );
     }
 }
