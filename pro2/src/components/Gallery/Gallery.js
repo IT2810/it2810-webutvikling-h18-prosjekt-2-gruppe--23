@@ -14,28 +14,20 @@ class Gallery extends Component {
         super()
 
         this.state = {
-            tabs: 1,
+            tabs: "1",
         }
-
-        this.handleTabs = this.handleTabs.bind(this)
     }
   
-    handleTabs (val){
-      console.log('state før handle'+val)
-      this.setState({tabs: val});
-      console.log('state etter handle' + this.state.tabs)
-      //getImage();
+    handleTabs (val){  
+      this.setState({tabs : val});
+      this.forceUpdate()
+      
     }
 
-    /*getImage(){
-        ReactDOM.render(<Bilde category={"Superheroes"} tabnr={this.state.tabs}></Bilde>,
-        getElementById('pic'))
-    }*/
-
     render() {
-        console.log(this.state.tabs)
-        let tall = this.state.tabs;
-        console.log('tal ='+tall)
+        console.log('state ved render: '+this.state.tabs)
+        console.log("1" == this.state.tabs)
+        //let tall = this.state.tabs;
         //console.log(superheroes[currentPage])
         return (
             <div className="content">
@@ -51,15 +43,14 @@ class Gallery extends Component {
                     <Tab id="tab4" oClick={()=> this.handleTabs(4)}number="4"/>
                 </div>
                 </div>
-
                 <div className="gridContainer">
                     <div id="pic" className="galleryPic">
-                    <Bilde category="Superheroes" tabnr={tall}></Bilde>
+                    <Bilde category="Superheroes" tabnr={this.state.tabs}></Bilde>
 
                     </div>
 
                     <div className="galleryText">
-                        <Text name="cliche0"></Text>
+                        <Text category="Riddles" tabnr={this.state.tabs}> </Text>
                     </div>
                     
                     <div className="gallerySound">
