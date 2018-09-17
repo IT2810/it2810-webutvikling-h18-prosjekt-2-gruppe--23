@@ -7,7 +7,7 @@ class CategoryMenu extends Component {
     //Source: https://www.youtube.com/watch?v=Mo2_UPkZjJU
     
     constructor(props){
-        super();
+        super(props);
 
         this.state = { showMenu : false };
 
@@ -23,7 +23,11 @@ class CategoryMenu extends Component {
         return( 
             <div>
                 <button className="menuButton" onClick={this.toggleDiv}><h1>Kategorier</h1></button>
-                {this.state.showMenu && <CategoryContent></CategoryContent>}
+                {this.state.showMenu && 
+                <CategoryContent selectPictureCategory = {this.props.selectPictureCategory}
+                selectTextCategory = {this.props.selectTextCategory}
+                selectSoundCategory = {this.props.selectSoundCategory} pic={this.props.pic} soun = {this.props.soun}
+                txt={this.props.txt}></CategoryContent>}
             </div>
         )
     }
