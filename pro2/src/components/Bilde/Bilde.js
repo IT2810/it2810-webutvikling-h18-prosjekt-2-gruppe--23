@@ -13,7 +13,16 @@ class Bilde extends Component {
         this.getImg({category, tabnr});
     }
 
+    componentDidUpdate(props) {
+      this.getImg(props)
+    }
 
+    shouldComponentUpdate(props, newProps) {
+      if( props.tabnr === newProps.tabnr) {
+        return false;
+      }
+      return true;
+    }
 
     getImg = async ({category, tabnr}) => {
           try {
@@ -28,7 +37,7 @@ class Bilde extends Component {
         }
 
     render() {
-        console.log(this.state)
+    
         return (
           <div className = "pictureName">
                 <div dangerouslySetInnerHTML={{__html: this.state.pictures}}></div>

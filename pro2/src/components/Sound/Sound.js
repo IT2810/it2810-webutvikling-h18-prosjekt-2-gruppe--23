@@ -10,8 +10,8 @@ class Sound extends Component{
 
     }
 
-/*  componentDidUpdate(){
-    this.getSound();
+  componentDidUpdate(props){
+    this.getSound(props);
   }
 
   shouldComponentUpdate(props, newProps) {
@@ -19,18 +19,18 @@ class Sound extends Component{
       return false;
     }
     return true;
-  }*/
+  }
 
-  getSound(){
-    const url = "Lyder/" + this.props.category + "/" + this.props.tabnr + ".mp3";
-    return url;
+  getSound({category, tabnr}){
+    const url = "Lyder/" + category + "/" + tabnr + ".mp3";
+    //this.setState({sound : url});
   }
 
   render(){
     return (
       <div className="soundContainer">
         <audio controls>
-          <source type="audio/mp3" src={this.getSound()} />
+          <source type="audio/mp3" src={} />
           Your browser does not support the audio element.
         </audio>
       </div>
