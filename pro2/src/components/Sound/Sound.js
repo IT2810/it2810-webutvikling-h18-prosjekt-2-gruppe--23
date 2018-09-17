@@ -2,37 +2,36 @@ import React, {Component} from 'react';
 
 class Sound extends Component{
   constructor(props) {
-        super()
+        super(props)
 
         this.state = {
             sound: "",
         }
 
+        this.doSomething = this.doSomething.bind(this);
+        this.onPauseClick = this.onPauseClick.bind(this);
     }
 
-  componentDidUpdate(props){
-    this.getSound(props);
-  }
-
-  shouldComponentUpdate(props, newProps) {
-    if (props.tabnr === newProps.tabnr){
-      return false;
+    doSomething() {
+      this.playAudio.pause()
+      this.playAudio.load()
+      this.playAudio.play()
     }
-    return true;
-  }
 
-  getSound({category, tabnr}){
-    const url = "Lyder/" + category + "/" + tabnr + ".mp3";
-    //this.setState({sound : url});
-  }
+    onPauseClick(){
+      this.playAudio.pause()
+    }
 
   render(){
+    console.log(this.props.tabnr)
     return (
       <div className="soundContainer">
-        <audio controls>
-          <source type="audio/mp3" src={} />
+        <audio ref={(playAudio) => {this.playAudio = playAudio;}}>
+          <source type="audio/mp3" src={"Lyder/" + this.props.category + "/" + this.props.tabnr + ".mp3"} />
           Your browser does not support the audio element.
         </audio>
+        <button onClick={this.doSomething}>Play</button>
+        <button onClick={this.onPauseClick}>Stop</button>
       </div>
     );
   }
