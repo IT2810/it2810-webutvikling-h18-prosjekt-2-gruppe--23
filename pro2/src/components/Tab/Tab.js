@@ -3,11 +3,6 @@ import './TabStyle.css';
 
 class Tab extends Component {
 
-  constructor(props){
-    super(props)
-  }
-
-
     render() {
         return (
             <button className="tab" onClick={this.props.oClick} >
