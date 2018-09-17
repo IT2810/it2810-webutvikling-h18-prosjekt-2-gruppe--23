@@ -9,29 +9,29 @@ class Sound extends Component{
             sound: "",
         }
 
-        this.doSomething = this.doSomething.bind(this);
+        this.playAudio = this.playAudio.bind(this);
         this.onPauseClick = this.onPauseClick.bind(this);
     }
 
-    doSomething() {
-      this.playAudio.pause()
-      this.playAudio.load()
-      this.playAudio.play()
+    playAudio() {
+      this.Audio.pause()
+      this.Audio.load()
+      this.Audio.play()
     }
 
     onPauseClick(){
-      this.playAudio.pause()
+      this.Audio.pause()
     }
 
   render(){
     console.log(this.props.tabnr)
     return (
       <div className="soundContainer">
-        <audio ref={(playAudio) => {this.playAudio = playAudio;}}>
+        <audio ref={(Audio) => {this.Audio = Audio;}}>
           <source type="audio/mp3" src={"Lyder/" + this.props.category + "/" + this.props.tabnr + ".mp3"} />
           Your browser does not support the audio element.
         </audio>
-        <button class="soundBtn" onClick={this.doSomething}>Spill av lyd</button>
+        <button class="soundBtn" onClick={this.playAudio}>Spill av lyd</button>
         <button class="soundBtn" onClick={this.onPauseClick}>Stopp lyd</button>
       </div>
     );
