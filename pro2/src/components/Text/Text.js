@@ -12,16 +12,16 @@ class Text extends Component {
         this.getText({category, tabnr});
     }
 
-    componentDidUpdate(props) {
+    componentWillReceiveProps(props) {
         this.getText(props)
       }
   
-      shouldComponentUpdate(props, newProps) {
+    shouldComponentUpdate(props, newProps) {
         if( props.tabnr === newProps.tabnr) {
           return false;
         }
         return true;
-      }
+      } 
 
 
     getText({category, tabnr})  {

@@ -13,7 +13,7 @@ class Bilde extends Component {
         this.getImg({category, tabnr});
     }
 
-    componentDidUpdate(props) {
+    componentWillReceiveProps(props) {
       this.getImg(props)
     }
 
@@ -22,7 +22,7 @@ class Bilde extends Component {
         return false;
       }
       return true;
-    }
+    } 
 
     getImg = async ({category, tabnr}) => {
           try {
