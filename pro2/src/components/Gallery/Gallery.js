@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-//import axios from 'axios';
-import Text from '../Text/Text'
+import axios from 'axios';
+//import Text from '../Text/Text'
 import Bilde from '../Bilde/Bilde'
 import './Gallery.css'
 import Tab from '../Tab/Tab'
@@ -12,23 +12,34 @@ import '../Tab/TabStyle.css';
 class Gallery extends Component {
 
     constructor(props) {
-        super()
+        super(props)
 
         this.state = {
-            tabs: "1",
+            tabs: 1,
             pictureCategory : "Superheroes",
             textCategory : "Cliches",
             soundCategory : "Animals",
+            text : ["", "", "", ""],
         }
 
         this.selectPictureCategory = this.selectPictureCategory.bind(this);
         this.selectTextCategory = this.selectTextCategory.bind(this);
         this.selectSoundCategory = this.selectSoundCategory.bind(this);
+        
     }
 
     handleTabs (val){
-      this.setState({tabs : val});
+        const textIndex = val-1;
+        if(!this.state.text[textIndex].length > 0) {
+            //console.log(textIndex);
+            this.getText(textIndex);
+        }
+        this.setState({tabs : val});
 
+    }
+
+    componentDidMount() {
+        this.getText(0);
     }
 
     selectPictureCategory(category) {
@@ -36,16 +47,38 @@ class Gallery extends Component {
     }
 
     selectTextCategory(category) {
-        this.setState({textCategory : category})
+        this.setState({
+            textCategory : category, 
+            text : ["","","",""]}, 
+            () => {
+            this.getText(this.state.tabs-1);
+        })
+        
     }
 
     selectSoundCategory(category) {
         this.setState({soundCategory : category})
     }
 
+    getText(itemIndex)  {
+        axios.get('/TextFile/' + this.state.textCategory + "/" + parseInt(itemIndex+1, 10) + '.json')
+        .then(response => {
+            const text = this.state.text.map( (element, index) => {
+                if(index === itemIndex) {
+                    return response.data.text;
+                } 
+                return element;
+            });
+            this.setState({text: text})
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    }
+
 
     render() {
-
+        const text = this.state.text[this.state.tabs-1]
         return (
             <div className="content">
 
@@ -72,7 +105,9 @@ class Gallery extends Component {
                     </div>
 
                     <div className="galleryText">
-                        <Text className="textInGallery" category={this.state.textCategory} tabnr={this.state.tabs}> </Text>
+                        <div className = "jsontxt">
+                            <p> { text } </p>
+                        </div>
                     </div>
 
                     <div className="gallerySound">
