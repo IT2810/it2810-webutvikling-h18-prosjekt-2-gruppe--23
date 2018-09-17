@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Sound.css'
 
 class Sound extends Component{
   constructor(props) {
@@ -30,8 +31,8 @@ class Sound extends Component{
           <source type="audio/mp3" src={"Lyder/" + this.props.category + "/" + this.props.tabnr + ".mp3"} />
           Your browser does not support the audio element.
         </audio>
-        <button onClick={this.doSomething}>Play</button>
-        <button onClick={this.onPauseClick}>Stop</button>
+        <button class="soundBtn" onClick={this.doSomething}>Spill av lyd</button>
+        <button class="soundBtn" onClick={this.onPauseClick}>Stopp lyd</button>
       </div>
     );
   }
