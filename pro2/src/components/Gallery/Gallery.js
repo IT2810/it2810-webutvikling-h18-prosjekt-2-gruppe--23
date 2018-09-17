@@ -6,6 +6,7 @@ import './Gallery.css'
 import Tab from '../Tab/Tab'
 import Sound from '../Sound/Sound';
 import CategoryMenu from '../CategoryMenu/CategoryMenu';
+import '../Tab/TabStyle.css';
 
 
 class Gallery extends Component {
@@ -33,12 +34,10 @@ class Gallery extends Component {
     }
 
     selectPictureCategory(category) {
-        //console.log(category);
         this.setState({pictureCategory : category});
     }
 
     selectTextCategory(category) {
-        //console.log(category);
         this.setState({textCategory : category})
     }
 
@@ -48,10 +47,6 @@ class Gallery extends Component {
 
 
     render() {
-        console.log('state ved render: '+this.state.tabs)
-        console.log("Bildekategori: " + this.state.pictureCategory)
-        console.log("Tekstkategori: " + this.state.textCategory)
-        console.log("Lydkategori: " + this.state.soundCategory)
     
         return (
             <div className="content">

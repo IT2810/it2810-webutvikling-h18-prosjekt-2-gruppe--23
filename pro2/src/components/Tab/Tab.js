@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './TabStyle.css';
-//import Gallery from '../Gallery/Gallery';
 
 class Tab extends Component {
 
@@ -8,11 +7,6 @@ class Tab extends Component {
     super(props)
   }
 
-  /*handleClick = () => {
-    console.log('Click happened');
-    console.log('Tabnr' + this.tabNumber)
-    ting
-  }*/
 
     render() {
         return (
