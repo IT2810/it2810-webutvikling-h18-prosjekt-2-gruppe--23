@@ -13,6 +13,13 @@ class Sound extends Component{
         this.onPauseClick = this.onPauseClick.bind(this);
     }
 
+
+  componentWillReceiveProps(nextProps){
+    if(nextProps.tabnr!==this.props.tabnr || nextProps.category!==this.props.category){
+      this.Audio.pause()
+    }
+  }
+
     playAudio() {
       this.Audio.pause()
       this.Audio.load()
