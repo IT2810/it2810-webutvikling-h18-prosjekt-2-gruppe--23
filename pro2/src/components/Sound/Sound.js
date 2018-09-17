@@ -13,25 +13,26 @@ class Sound extends Component{
         this.onPauseClick = this.onPauseClick.bind(this);
     }
 
-
-  componentWillReceiveProps(nextProps){
-    if(nextProps.tabnr!==this.props.tabnr || nextProps.category!==this.props.category){
-      this.Audio.pause()
+    //Function checking if the tab or category is changed and pauses the audio if it is
+    componentWillReceiveProps(nextProps){
+      if(nextProps.tabnr!==this.props.tabnr || nextProps.category!==this.props.category){
+        this.Audio.pause()
+      }
     }
-  }
 
+    //Function that load and plays the audio
     playAudio() {
       this.Audio.pause()
       this.Audio.load()
       this.Audio.play()
     }
 
+    //Fuction that pauses the audio
     onPauseClick(){
       this.Audio.pause()
     }
 
   render(){
-    console.log(this.props.tabnr)
     return (
       <div className="soundContainer">
         <audio ref={(Audio) => {this.Audio = Audio;}}>
