@@ -13,16 +13,18 @@ class Bilde extends Component {
         this.getImg({category, tabnr});
     }
 
-    componentWillReceiveProps(props) {
-      this.getImg(props)
-    }
-
     shouldComponentUpdate(props, newProps) {
       if( props.tabnr === newProps.tabnr) {
         return false;
       }
       return true;
     } 
+    
+    componentWillReceiveProps(props) {
+      this.getImg(props)
+    }
+
+    
 
     getImg = async ({category, tabnr}) => {
           try {
