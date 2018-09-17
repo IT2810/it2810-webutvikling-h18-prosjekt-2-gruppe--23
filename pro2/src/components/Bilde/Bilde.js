@@ -22,8 +22,15 @@ class Bilde extends Component {
     componentDidUpdate(prewprops) {
       if( this.props!== prewprops) {
         this.getImg()
+
       }
     } 
+    
+    componentWillReceiveProps(props) {
+      this.getImg(props)
+    }
+
+    
 
     async getImg() {
           if(sessionStorage.getItem('/BilderP2/' + this.props.category + '/' + this.props.tabnr + '.svg') === null){try {
