@@ -61,7 +61,8 @@ class Gallery extends Component {
                 <div className="galleryCategories">
                     <CategoryMenu selectPictureCategory={this.selectPictureCategory}
                     selectTextCategory = {this.selectTextCategory}
-                    selectSoundCategory = {this.selectSoundCategory}></CategoryMenu>
+                    selectSoundCategory = {this.selectSoundCategory} pic={this.state.pictureCategory} 
+                    soun = {this.state.soundCategory} txt={this.state.textCategory} ></CategoryMenu>
                 </div>
                 <div className="galleryTab">
                 <div className="tabContainer">
@@ -78,11 +79,11 @@ class Gallery extends Component {
                     </div>
 
                     <div className="galleryText">
-                        <Text category={this.state.textCategory} tabnr={this.state.tabs}> </Text>
+                        <Text className="textInGallery" category={this.state.textCategory} tabnr={this.state.tabs}> </Text>
                     </div>
 
                     <div className="gallerySound">
-                        <Sound category="Animals" tabnr="1"></Sound>
+                        <Sound category={this.state.category} tabnr="1"></Sound>
                     </div>
 
                 </div>

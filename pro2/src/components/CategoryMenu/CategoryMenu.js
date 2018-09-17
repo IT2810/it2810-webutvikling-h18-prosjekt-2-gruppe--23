@@ -26,7 +26,8 @@ class CategoryMenu extends Component {
                 {this.state.showMenu && 
                 <CategoryContent selectPictureCategory = {this.props.selectPictureCategory}
                 selectTextCategory = {this.props.selectTextCategory}
-                selectSoundCategory = {this.props.selectSoundCategory}></CategoryContent>}
+                selectSoundCategory = {this.props.selectSoundCategory} pic={this.props.pic} soun = {this.props.soun}
+                txt={this.props.txt}></CategoryContent>}
             </div>
         )
     }

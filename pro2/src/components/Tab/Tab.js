@@ -5,7 +5,7 @@ import './TabStyle.css';
 class Tab extends Component {
 
   constructor(props){
-    super()
+    super(props)
   }
 
   /*handleClick = () => {

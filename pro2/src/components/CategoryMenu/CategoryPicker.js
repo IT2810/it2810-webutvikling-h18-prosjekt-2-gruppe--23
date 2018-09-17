@@ -8,7 +8,7 @@ class CategoryPicker extends Component {
        super(props);
 
         this.state = {
-           category : props.cat1,
+           category : this.props.mainCat,
         };
 
 
