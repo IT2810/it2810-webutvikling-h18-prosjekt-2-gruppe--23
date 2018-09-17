@@ -4,15 +4,16 @@ import './CategoryMenu.css';
 class CategoryPicker extends Component {
    
    //Source: https://magnusbenoni.com/radio-buttons-react/
-    constructor() {
-       super();
+    constructor(props) {
+       super(props);
 
         this.state = {
-           category : '',
+           category : props.cat1,
         };
 
 
         this.handleChange = this.handleChange.bind(this);
+        //console.log(props.selectPictureCategory)
 
    }
 
@@ -20,11 +21,12 @@ class CategoryPicker extends Component {
        this.setState({
            category : event.target.value
        });
+       this.props.selectCategory(event.target.value)
    }
 
 
    render () {
-        console.log(this.props.id + "," + this.state.category);
+        //console.log(this.props.id + "," + this.state.category);
        return (
            <div className="radioHolder">
                <form onSubmit={this.handleSubmit}>

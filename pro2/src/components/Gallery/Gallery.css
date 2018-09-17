@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     margin: 10px;
+    width: 80%;
+    margin: auto;
    
     
 }
@@ -11,7 +13,9 @@
     grid-column: 1;
     border: 1px solid;
     border-color: #B3C4C6;
-    margin: 10px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
  }
 
 .galleryText{ 
@@ -41,6 +45,8 @@
    .galleryPic{
        grid-row: 1;
        grid-column: 1;
+       width: 80%;
+       margin: auto;
    }
 
    .gallerySound {

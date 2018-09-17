@@ -15,27 +15,53 @@ class Gallery extends Component {
 
         this.state = {
             tabs: "1",
+            pictureCategory : "Superheroes",
+            textCategory : "Cliches",
+            soundCategory : "Animals",
         }
+
+        this.selectPictureCategory = this.selectPictureCategory.bind(this);
+        this.selectTextCategory = this.selectTextCategory.bind(this);
+        this.selectSoundCategory = this.selectSoundCategory.bind(this);
     }
-  
+    
+    
+
     handleTabs (val){  
       this.setState({tabs : val});
-      this.forceUpdate()
       
     }
 
+    selectPictureCategory(category) {
+        //console.log(category);
+        this.setState({pictureCategory : category});
+    }
+
+    selectTextCategory(category) {
+        //console.log(category);
+        this.setState({textCategory : category})
+    }
+
+    selectSoundCategory(category) {
+        this.setState({soundCategory : category})
+    }
+
+
     render() {
         console.log('state ved render: '+this.state.tabs)
-        console.log("1" == this.state.tabs)
-        //let tall = this.state.tabs;
-        //console.log(superheroes[currentPage])
+        console.log("Bildekategori: " + this.state.pictureCategory)
+        console.log("Tekstkategori: " + this.state.textCategory)
+        console.log("Lydkategori: " + this.state.soundCategory)
+    
         return (
             <div className="content">
 
             <div id = "test"></div>
 
                 <div className="galleryCategories">
-                    <CategoryMenu></CategoryMenu>
+                    <CategoryMenu selectPictureCategory={this.selectPictureCategory}
+                    selectTextCategory = {this.selectTextCategory}
+                    selectSoundCategory = {this.selectSoundCategory}></CategoryMenu>
                 </div>
                 <div className="galleryTab">
                 <div className="tabContainer">
@@ -47,12 +73,12 @@ class Gallery extends Component {
                 </div>
                 <div className="gridContainer">
                     <div id="pic" className="galleryPic">
-                    <Bilde category="Superheroes" tabnr={this.state.tabs}></Bilde>
+                    <Bilde category={this.state.pictureCategory} tabnr={this.state.tabs}></Bilde>
 
                     </div>
 
                     <div className="galleryText">
-                        <Text category="Riddles" tabnr={this.state.tabs}> </Text>
+                        <Text category={this.state.textCategory} tabnr={this.state.tabs}> </Text>
                     </div>
 
                     <div className="gallerySound">
