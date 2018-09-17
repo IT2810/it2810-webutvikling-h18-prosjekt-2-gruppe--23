@@ -26,9 +26,9 @@ class Gallery extends Component {
         this.selectSoundCategory = this.selectSoundCategory.bind(this);
     }
 
-    handleTabs (val){  
+    handleTabs (val){
       this.setState({tabs : val});
-      
+
     }
 
     selectPictureCategory(category) {
@@ -45,7 +45,7 @@ class Gallery extends Component {
 
 
     render() {
-    
+
         return (
             <div className="content">
 
@@ -54,7 +54,7 @@ class Gallery extends Component {
                 <div className="galleryCategories">
                     <CategoryMenu selectPictureCategory={this.selectPictureCategory}
                     selectTextCategory = {this.selectTextCategory}
-                    selectSoundCategory = {this.selectSoundCategory} pic={this.state.pictureCategory} 
+                    selectSoundCategory = {this.selectSoundCategory} pic={this.state.pictureCategory}
                     soun = {this.state.soundCategory} txt={this.state.textCategory} ></CategoryMenu>
                 </div>
                 <div className="galleryTab">
@@ -76,7 +76,7 @@ class Gallery extends Component {
                     </div>
 
                     <div className="gallerySound">
-                        <Sound category={this.state.category} tabnr={this.state.tabs}></Sound>
+                        <Sound category={this.state.soundCategory} tabnr={this.state.tabs}></Sound>
                     </div>
 
                 </div>
