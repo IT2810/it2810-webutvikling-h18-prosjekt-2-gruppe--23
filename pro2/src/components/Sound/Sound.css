@@ -1,4 +1,6 @@
 .soundBtn{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+  font-weight: 300;
   padding: 12px 28px;
   cursor: pointer;
   background-color: #B3C4C6;
