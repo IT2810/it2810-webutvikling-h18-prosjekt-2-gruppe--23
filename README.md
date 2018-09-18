@@ -32,3 +32,40 @@ Dette er en online utstilling med brukerstyrte kombinasjoner av av lyd, bilde og
 
 <a name="kilder"></a>
 ## Kilder
+
+Generelt: 
+* https://www.youtube.com/watch?v=965sASYM220
+* https://css-tricks.com/using-data-in-react-with-the-fetch-api-and-axios/
+* https://reactjs.org/docs/faq-structure.html 
+
+Bilder:
+* Autumn : https://www.svgrepo.com/svg/64198/autumn
+* Summer: https://www.svgrepo.com/svg/9335/summer
+* Winter: https://www.svgrepo.com/svg/222564/snowman-snow
+* Spring: https://www.svgrepo.com/svg/19911/spring
+* Halloween: https://www.svgrepo.com/svg/219751/pumpkin-halloween
+* Christmas: https://www.svgrepo.com/svg/184568/santa-claus
+* Easter: https://www.svgrepo.com/svg/264325/easter-egg-easter
+* Valentine: https://www.svgrepo.com/svg/210259/valentines-day-love
+* Flash: https://www.svgrepo.com/svg/54412/superheroe
+* Superman: https://www.svgrepo.com/svg/25445/superman 
+* Spiderman: https://www.svgrepo.com/svg/161448/spiderman 
+* Batman: https://www.svgrepo.com/svg/27924/batman
+
+Tutorials:
+* https://www.tutorialspoint.com/json/json_ajax_example.htm
+* https://oreillymedia.github.io/Using_SVG/extras/ch10-ajax.html
+* https://css-tricks.com/scale-svg/
+* https://www.npmjs.com/package/axios
+* https://medium.com/@patelarpan2010/making-ajax-call-using-react-and-axios-4071e3e9ce65
+* https://medium.com/dailyjs/how-to-create-react-tabs-using-contextapi-932c7bec35c7 
+* https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17 
+
+Lyder:
+* https://freesound.org/
+
+Tekst:
+* https://www.womenshealthmag.com/relationships/g19991392/cheesy-love-quotes/ 
+* http://vitsen.no/ 
+* https://humoristen.no/vitser/ 
+* http://gåte.no 
