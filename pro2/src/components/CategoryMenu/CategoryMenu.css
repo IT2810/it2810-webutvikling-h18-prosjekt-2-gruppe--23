@@ -1,4 +1,6 @@
 .menuButton {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+    font-weight: 300;
     background-color: #ED7157;
     border: 1px solid;
     border-color: #ffffff;
@@ -9,6 +11,10 @@
 
 }
 
+h1 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+    font-weight: 300;
+}
 
 .categoryContent {
     width: 50%;
@@ -34,6 +40,9 @@ ul {
 }
 
 .catPicture, .catText, .catSound {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+    font-weight: 300;
+    color:#505050;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;

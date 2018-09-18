@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import axios from 'axios';
 import Text from '../Text/Text'
 import Bilde from '../Bilde/Bilde'
 import './Gallery.css'
