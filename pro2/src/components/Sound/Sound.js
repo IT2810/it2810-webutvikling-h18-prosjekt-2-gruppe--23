@@ -37,7 +37,7 @@ class Sound extends Component{
       <div className="soundContainer">
 
         <audio ref={(Audio) => {this.Audio = Audio;}} loop>
-          <source type="audio/mp3" src={"Lyder/" + this.props.category + "/" + this.props.tabnr + ".mp3"} />
+          <source type="audio/mp3" src={"SoundFiles/" + this.props.category + "/" + this.props.tabnr + ".mp3"} />
           Your browser does not support the audio element.
         </audio>
 
