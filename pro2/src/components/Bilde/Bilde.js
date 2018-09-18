@@ -31,7 +31,8 @@ class Bilde extends Component {
     //Function checking if file is in session storage, if it is not, it loads and saves the new file to session
     //storage. If the file is in session storage already, the file is retrieved from here.
     async getImg() {
-          if(sessionStorage.getItem('/BilderP2/' + this.props.category + '/' + this.props.tabnr + '.svg') === null){try {
+          if(sessionStorage.getItem('/BilderP2/' + this.props.category + '/' + this.props.tabnr + '.svg') === null){
+              try {
               const picture = await axios.get('/BilderP2/' + this.props.category + '/' + this.props.tabnr + '.svg');
               sessionStorage.setItem('/BilderP2/' + this.props.category + '/' + this.props.tabnr + '.svg', picture.data)
               this.setState({
