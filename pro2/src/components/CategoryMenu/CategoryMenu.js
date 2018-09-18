@@ -14,6 +14,7 @@ class CategoryMenu extends Component {
         this.toggleDiv = this.toggleDiv.bind(this);
     }
 
+    //Show or hide menu content
     toggleDiv = () => {
         const { showMenu} = this.state;
         this.setState( { showMenu : !showMenu})
@@ -23,11 +24,16 @@ class CategoryMenu extends Component {
         return( 
             <div>
                 <button className="menuButton" onClick={this.toggleDiv}><h1>Kategorier</h1></button>
+
                 {this.state.showMenu && 
-                <CategoryContent selectPictureCategory = {this.props.selectPictureCategory}
+                <CategoryContent 
+                selectPictureCategory = {this.props.selectPictureCategory}
                 selectTextCategory = {this.props.selectTextCategory}
-                selectSoundCategory = {this.props.selectSoundCategory} pic={this.props.pic} soun = {this.props.soun}
-                txt={this.props.txt}></CategoryContent>}
+                selectSoundCategory = {this.props.selectSoundCategory} 
+                pic={this.props.pic} 
+                soun = {this.props.soun}
+                txt={this.props.txt}>
+                </CategoryContent>}
             </div>
         )
     }
