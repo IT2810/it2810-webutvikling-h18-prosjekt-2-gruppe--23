@@ -14,8 +14,8 @@ class Sound extends Component{
     }
 
     //Function checking if the tab or category is changed and pauses the audio if it is
-    componentWillReceiveProps(nextProps){
-      if(nextProps.tabnr!==this.props.tabnr || nextProps.category!==this.props.category){
+    componentDidUpdate(prevprops) {
+      if( this.props!== prevprops) {
         this.Audio.pause()
       }
     }
@@ -35,7 +35,7 @@ class Sound extends Component{
   render(){
     return (
       <div className="soundContainer">
-        <audio ref={(Audio) => {this.Audio = Audio;}}>
+        <audio ref={(Audio) => {this.Audio = Audio;}} loop>
           <source type="audio/mp3" src={"Lyder/" + this.props.category + "/" + this.props.tabnr + ".mp3"} />
           Your browser does not support the audio element.
         </audio>
