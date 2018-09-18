@@ -11,12 +11,11 @@ class CategoryPicker extends Component {
            category : this.props.mainCat,
         };
 
-
         this.handleChange = this.handleChange.bind(this);
-        //console.log(props.selectPictureCategory)
 
    }
 
+   //Manages the category-choice
    handleChange(event) {
        this.setState({
            category : event.target.value
@@ -24,9 +23,8 @@ class CategoryPicker extends Component {
        this.props.selectCategory(event.target.value)
    }
 
-
+   //Renders a Radio-button group of 3 radiobuttons with categories based on the props
    render () {
-        //console.log(this.props.id + "," + this.state.category);
        return (
            <div className="radioHolder">
                <form onSubmit={this.handleSubmit}>
