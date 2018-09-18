@@ -35,7 +35,7 @@ Først lagde vi en papirmodell, og vurderte ønsket layout for mobil, nettbrett 
 
 Vi brukte CSS-grid for layouten, slik at elementene kunne ligge ved siden av hverandre på en PC-skjerm, mens de på en mobilskjerm ble liggende under hverandre. Plasseringen av elementer i rader og kolonner på de ulike skjermene ble satt med media queries med bestemt maksbredde. Dette ga en flytende og fleksibel layout. Vi brukte også media queries til å skalere størrelsen på elementene i forhold til størrelsen på skjermen. Siden bildene er SVG-filer, gjorde dette det lett å skalere bildene uten å miste kvaliteten. Viewport i meta-taggen er implementert i index.html-fila. Hvordan webløsningen tilpasser seg skjermens størrelse og orientering kan du se i eksempelet her, for iPhone og pc.
 
-<img width="680" alt="skjermbilde 2018-09-18 kl 13 46 08" src="https://user-images.githubusercontent.com/22234642/45685517-cf510400-bb49-11e8-9ed1-026066a10fc2.png"><img width="157" alt="skjermbilde 2018-09-18 kl 13 44 50" src="https://user-images.githubusercontent.com/22234642/45685525-d546e500-bb49-11e8-934c-c6609c839ce4.png">
+<img width="640" alt="skjermbilde 2018-09-18 kl 13 46 08" src="https://user-images.githubusercontent.com/22234642/45685517-cf510400-bb49-11e8-9ed1-026066a10fc2.png"> <img width="190" alt="skjermbilde 2018-09-18 kl 13 44 50" src="https://user-images.githubusercontent.com/22234642/45685525-d546e500-bb49-11e8-934c-c6609c839ce4.png">
 
 <b>React - mappestruktur og filstruktur</b>
 
