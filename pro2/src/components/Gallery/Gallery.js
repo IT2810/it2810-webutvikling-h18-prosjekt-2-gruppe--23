@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Text from '../Text/Text'
-import Bilde from '../Bilde/Bilde'
+import Picture from '../Picture/Picture'
 import './Gallery.css'
 import Tab from '../Tab/Tab'
 import Sound from '../Sound/Sound';
@@ -88,7 +88,7 @@ class Gallery extends Component {
                 <div className="gridContainer">
 
                     <div id="pic" className="galleryPic">
-                        <Bilde category={this.state.pictureCategory} tabnr={this.state.tabs}></Bilde>
+                        <Picture category={this.state.pictureCategory} tabnr={this.state.tabs}></Picture>
                     </div>
 
 
