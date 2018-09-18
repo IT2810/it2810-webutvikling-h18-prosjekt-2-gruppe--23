@@ -1,0 +1,15 @@
+.soundBtn{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+  font-weight: 300;
+  padding: 12px 28px;
+  cursor: pointer;
+  background-color: #B3C4C6;
+  color: #ffffff;
+  border-color: #ffffff;
+  margin: 4px;
+  font-size: 14px;
+}
+
+.soundBtn:hover{
+  background-color:rgb(225, 243, 245);
+}

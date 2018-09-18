@@ -1,0 +1,14 @@
+.Header {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+    font-weight: 300;
+    background-color: #B3C4C6;
+    height: 50px;
+    margin: 0;
+}
+
+.Header > p {
+    margin: auto;
+    font-size: 30px;
+    color: #ffffff;
+    padding-top: 10px;
+}

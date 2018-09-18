@@ -1,0 +1,15 @@
+.Footer {
+    background-color:  #ED7157;
+    height: 50px;
+    margin: auto;
+
+}
+
+.Footer-text {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 10px;
+
+}
