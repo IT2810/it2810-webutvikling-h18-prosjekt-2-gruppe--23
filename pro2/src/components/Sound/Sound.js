@@ -14,8 +14,8 @@ class Sound extends Component{
     }
 
     //Function checking if the tab or category is changed and pauses the audio if it is
-    componentWillReceiveProps(nextProps){
-      if(nextProps.tabnr!==this.props.tabnr || nextProps.category!==this.props.category){
+    componentDidUpdate(prevprops) {
+      if( this.props!== prevprops) {
         this.Audio.pause()
       }
     }
