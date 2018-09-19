@@ -39,7 +39,7 @@ Vi brukte CSS-grid for layouten, slik at elementene kunne ligge ved siden av hve
 
 <b>React - mappestruktur og filstruktur</b>
 
-Mappene er strukturert ved bruk av en “components”-mappe i src. Denne inneholder flere undermapper, som for eksempel “CategoryMenu” og “Gallery”. Undermappene inneholder komponenter, samt alt som er relevant for hver komponent, som CSS-filer. Videre har vi en fil for hver komponent. Dette valgte vi fordi det gjør prosjektet veldig oversiktlig. 
+Mappene er strukturert ved bruk av en “components”-mappe i src. Denne inneholder flere undermapper, som for eksempel “CategoryMenu” og “Gallery”. Undermappene inneholder komponenter, samt alt som er relevant for hver komponent, som CSS-filer. Videre har vi en fil for hver komponent. Dette ble gjort slik fordi det gjør prosjektet veldig oversiktlig. 
 
 Undermappene førte til litt nøsting når vi skulle importere filene våre andre steder, men dette var en liten pris å betale for en oversiktlig mappe- og filstruktur. Ettersom dette var et lite prosjekt, fungerte mappestrukturen vår godt. I et større prosjekt måtte vi nok vurdert om denne strukturen ville fungert godt, da flere filer fort ville gjort at vi hadde fått et unødvendig stort antall undermapper. Da ville vi kanskje hatt mer generelle undermapper, slik at vi kunne hatt flere filer i hver.
 
@@ -49,7 +49,7 @@ Vi satt sammen hele prosjektet i et galleri (Gallery.js) som inneholder alle kom
 
 <b>Laste filer dynamisk med AJAX</b>
 
-Ingen på gruppen hadde vært borti ajax tidligere, vi valgte derfor å holde oss til de bibliotekene som ble anbefalt på forelesningen. Vi leste oss opp på både fetch og axios. Først tenkte vi at fetch hørtes ut som den beste løsningen siden dette er standarden for javascript. Men ettersom axios har flere innebygde funksjonaliteter, blant annet en mer automatisert måte å håndtere JSON-filer på, begynte vi å helle mer mot å bruke dette. Da vi fant en fin måte å hente svg-filene vi trengte med axios, ble avgjørelsen tatt. I tillegg til dette fungerer axios godt med de fleste nettlesere. 
+Ingen på gruppen hadde vært borti ajax tidligere, vi valgte derfor å fokusere på de bibliotekene som ble anbefalt på forelesningen. Vi leste oss opp på både fetch og axios. Først tenkte vi at fetch hørtes ut som den beste løsningen siden dette er standarden for javascript. Men ettersom axios har flere innebygde funksjonaliteter, blant annet en mer automatisert måte å håndtere JSON-filer på, begynte vi å helle mer mot å bruke dette. Da vi fant en fin måte å hente svg-filene med axios også, ble avgjørelsen tatt. I tillegg til dette fungerer axios godt med de fleste nettlesere. 
 
 Siden vi allerede var i gang med å bruke node.js og npm var det veldig greit å få lagt til axios som tredjepartsbibliotek og begynne å hente ut filene vi ønsket. Alle filene som skulle brukes på siden ble lagt i public-mappen, for så å bli hentet inn i hver sin komponent. 
 
@@ -59,13 +59,13 @@ Før vi laster opp tekst eller bilde sjekker vi om dette allerede eksisterer i s
 
 <b>Samarbeid og bruk av git</b>
 
-Da vi satt i gang med prosjektet delte vi opp prosjektet i mindre deloppgaver, som ble lagt inn på gitHub som issues. Slik hadde hele gruppa kontroll på hva som ble gjort, og hva som måtte gjøres til et hvert tidspunkt. Koden distribuerte vi mellom oss ved å bruke git, og vi merget ofte sammen det vi hadde gjort, slik at prosjektet var så oppdatert som mulig til en hver tid. Ettersom vi som oftest satt og jobbet sammen på prosjektet, benyttet vi issues i mindre grad enn det vi ville gjort hvis vi hadde jobbet fra forskjellige lokasjoner. Issues ble derfor brukt hovedsakelig til å holde kontrollen på fremgangen i prosjektet. 
+Da vi satt i gang med prosjektet delte vi opp prosjektet i mindre deloppgaver, som ble lagt inn på gitHub som issues. Slik hadde hele gruppa kontroll på hva som ble gjort, og hva som måtte gjøres til en hver tid. Koden distribuerte vi mellom oss ved å bruke git, og vi merget ofte sammen det vi hadde gjort, slik at prosjektet var så oppdatert som mulig til en hver tid. Ettersom vi som oftest satt og jobbet sammen på prosjektet, benyttet vi issues i mindre grad enn det vi ville gjort hvis vi hadde jobbet fra forskjellige lokasjoner. Issues ble derfor brukt hovedsakelig til å holde kontrollen på fremgangen i prosjektet. 
 
 <b>Testing</b>
 
 Vi testet prosjektet jevnt gjennom hele prosessen med Chrome’s Toggle Device Toolbar. Dette gjorde at vi jevnlig oppdaterte ting som ikke virket slik vi ønsket på ulike skjermstørrelser. På slutten av prosjektet testet vi webløsningen nøye på ulike plattformer. 
 
-Vi valgte å teste på mobil (liten skjerm), nettbrett (mellomstor skjerm) og PC (stor skjerm). Vi testet enhetene både horisontalt og vertikalt. Da vi testet webløsningen med de forskjellige skjermstørrelsene var vi opptatt av at brukergrensesnittet skulle være intuitivt, brukervennlig og fint, at all funksjonalitet fungerte og at det responsive fungerte, altså at siden tilpasset seg når skjermens størrelse ble justert. Vi har også cross browser-testa webløsningen vår. Vi testet i Chrome, Firefox og Safari. Testingen gikk ut på å sjekke om siden vår så lik ut og hadde lik funksjonalitet i de ulike nettleserne. Det har den.  
+Vi valgte å teste på mobil (liten skjerm), nettbrett (mellomstor skjerm) og PC (stor skjerm). Vi testet enhetene både horisontalt og vertikalt. Da vi testet webløsningen med de forskjellige skjermstørrelsene var vi opptatt av at brukergrensesnittet skulle være intuitivt, brukervennlig og fint, at all funksjonalitet fungerte og at det var responsivt, altså at siden tilpasset seg når skjermens størrelse ble justert. Vi har også cross browser-testet webløsningen vår. Vi testet i Chrome, Firefox og Safari. Testingen gikk ut på å sjekke om siden vår så lik ut og hadde lik funksjonalitet i de ulike nettleserne. Det har den.  
 
 
 <a name="kilder"></a>
