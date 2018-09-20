@@ -19,14 +19,14 @@ Dette er en online utstilling med brukerstyrte kombinasjoner av av lyd, bilde og
 ## Installering
 1. Last ned Node.js [her](https://nodejs.org/en/)
 2. Last ned axios [her](https://www.npmjs.com/package/axios)
-3. Deretter naviger inn i pro2 i terminalen og skriv "npm start" for å kjøre prosjektet lokalt.
+3. Naviger inn i pro2 i terminalen og skriv "npm start" for å kjøre prosjektet lokalt.
 
 
 <a name="dok"></a>
 ## Dokumentasjon
 <b>Tabs display for utstilling</b>
 
-For å vise frem de fire kombinasjonene av utstillingen, basert på kategorivalgene, valgte vi å ha et tabs display. Dette gjorde vi fordi det er oversiktlig og fint. For å velge kategorier valgte vi å ha en kategorimeny, som kan åpnes/lukkes, siden vi mener utstillingen ble finere når kategorivalgene ikke syntes. Vi la til header og footer for en ryddigere helhet. 
+For å vise frem de fire kombinasjonene av utstillingen, basert på kategorivalgene, valgte vi å ha et tabs display. Dette gjorde vi fordi det er oversiktlig og fint. For å velge kategorier valgte vi å ha en kategorimeny som kan åpnes/lukkes, siden vi mener utstillingen ble finere når kategorivalgene ikke syntes. Vi la til header og footer for en ryddigere helhet. 
 
 <b>Responsivt web-design</b>
 
@@ -44,7 +44,7 @@ Mappene er strukturert ved bruk av en “components”-mappe i src. Denne inneho
 
 Undermappene førte til litt nøsting når vi skulle importere filene våre andre steder, men dette var en liten pris å betale for en oversiktlig mappe- og filstruktur. Ettersom dette var et lite prosjekt, fungerte mappestrukturen vår godt. I et større prosjekt måtte vi nok vurdert om denne strukturen ville fungert godt, da flere filer fort ville gjort at vi hadde fått et unødvendig stort antall undermapper. Da ville vi kanskje hatt mer generelle undermapper, slik at vi kunne hatt flere filer i hver.
 
-Vi satt sammen hele prosjektet i et galleri (Gallery.js) som inneholder alle komponenten som vises i utstillingen. Gallery inneholder en kategori-meny, tabsene, en bilde-komponent, en tekst-komponent og en lyd-komponent. Videre inneholder kategori-menyen en rekke underkomponenter for å håndtere funksjonaliteten for å åpne/lukke menyen.
+Vi satt sammen hele prosjektet i et galleri (Gallery.js) som inneholder alle komponentene som vises i utstillingen. Gallery inneholder en kategori-meny, tabsene, en bilde-komponent, en tekst-komponent og en lyd-komponent. Videre inneholder kategori-menyen en rekke underkomponenter for å håndtere funksjonaliteten for å åpne/lukke menyen.
 
 <img width="153" alt="skjermbilde 2018-09-18 kl 13 46 46" src="https://user-images.githubusercontent.com/22234642/45685342-5b166080-bb49-11e8-8f98-46d3892f25a9.png">
 
@@ -67,7 +67,7 @@ Da vi satt i gang med prosjektet delte vi opp prosjektet i mindre deloppgaver, s
 
 Vi testet prosjektet jevnt gjennom hele prosessen med Chrome’s Toggle Device Toolbar. Dette gjorde at vi jevnlig oppdaterte ting som ikke virket slik vi ønsket på ulike skjermstørrelser. På slutten av prosjektet testet vi webløsningen nøye på ulike plattformer. 
 
-Vi valgte å teste på mobil (liten skjerm), iPad (mellomstor skjerm) og PC (stor skjerm). Vi testet enhetene både horisontalt og vertikalt. For alle enhetene var det planlagt at headeren, kategorimenyen og tabsene skulle ligge øverst og at footeren skulle ligge nederst på siden. På mobil og iPad var det planlagt at elementene i utstillingen skulle ligge under hverandre, med bilde øverst, deretter lydknapper og tilslutt tekst. På PC var det planlagt at elementene i utstillingen skulle ligge ved siden av hverandre, men bildet til venstre og tekst og lydknapper til høyre, med teksten øverst (skjermbilder av dette lenger opp i dokumentasjonen). 
+Vi valgte å teste på mobil (liten skjerm), iPad (mellomstor skjerm) og PC (stor skjerm). Vi testet enhetene både horisontalt og vertikalt. For alle enhetene var det planlagt at headeren, kategorimenyen og tabsene skulle ligge øverst og at footeren skulle ligge nederst på siden. På mobil og iPad var det planlagt at elementene i utstillingen skulle ligge under hverandre, med bildet øverst, deretter lydknapper og tilslutt tekst. På PC var det planlagt at elementene i utstillingen skulle ligge ved siden av hverandre, men bildet til venstre og tekst og lydknapper til høyre, med teksten øverst (skjermbilder av dette lenger opp i dokumentasjonen). 
 
 Da vi testet webløsningen med de forskjellige skjermstørrelsene var vi opptatt av at sideelementene skulle ligge der vi ønsket, at all funksjonalitet fungerte, at brukergrensesnittet var intuitivt og fint og at det var responsivt, altså at siden tilpasset seg når skjermens størrelse ble justert. Vi har også cross browser-testet webløsningen vår. Vi testet i Chrome, Firefox og Safari. Testingen gikk ut på å sjekke om siden vår så lik ut og hadde lik funksjonalitet i de ulike nettleserne. Det har den.  
 
