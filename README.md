@@ -6,6 +6,7 @@ Dette er en online utstilling med brukerstyrte kombinasjoner av av lyd, bilde og
 * [Verktøy og rammeverk](#v&r)
 * [Installering](#inst)
 * [Dokumentasjon](#dok)
+* [Testing](#testing)
 * [Kilder](#kilder)
 
 <a name="v&r"></a>
@@ -61,12 +62,14 @@ Før vi laster opp tekst eller bilde sjekker vi om dette allerede eksisterer i s
 
 Da vi satt i gang med prosjektet delte vi opp prosjektet i mindre deloppgaver, som ble lagt inn på gitHub som issues. Slik hadde hele gruppa kontroll på hva som ble gjort, og hva som måtte gjøres til en hver tid. Koden distribuerte vi mellom oss ved å bruke git, og vi merget ofte sammen det vi hadde gjort, slik at prosjektet var så oppdatert som mulig til en hver tid. Ettersom vi som oftest satt og jobbet sammen på prosjektet, benyttet vi issues i mindre grad enn det vi ville gjort hvis vi hadde jobbet fra forskjellige lokasjoner. Issues ble derfor brukt hovedsakelig til å holde kontrollen på fremgangen i prosjektet. 
 
-<b>Testing</b>
+<a name="testing"></a>
+## Testing
 
 Vi testet prosjektet jevnt gjennom hele prosessen med Chrome’s Toggle Device Toolbar. Dette gjorde at vi jevnlig oppdaterte ting som ikke virket slik vi ønsket på ulike skjermstørrelser. På slutten av prosjektet testet vi webløsningen nøye på ulike plattformer. 
 
-Vi valgte å teste på mobil (liten skjerm), nettbrett (mellomstor skjerm) og PC (stor skjerm). Vi testet enhetene både horisontalt og vertikalt. Da vi testet webløsningen med de forskjellige skjermstørrelsene var vi opptatt av at brukergrensesnittet skulle være intuitivt, brukervennlig og fint, at all funksjonalitet fungerte og at det var responsivt, altså at siden tilpasset seg når skjermens størrelse ble justert. Vi har også cross browser-testet webløsningen vår. Vi testet i Chrome, Firefox og Safari. Testingen gikk ut på å sjekke om siden vår så lik ut og hadde lik funksjonalitet i de ulike nettleserne. Det har den.  
+Vi valgte å teste på mobil (liten skjerm), iPad (mellomstor skjerm) og PC (stor skjerm). Vi testet enhetene både horisontalt og vertikalt. For alle enhetene var det planlagt at headeren, kategorimenyen og tabsene skulle ligge øverst og at footeren skulle ligge nederst på siden. På mobil og iPad var det planlagt at elementene i utstillingen skulle ligge under hverandre, med bilde øverst, deretter lydknapper og tilslutt tekst. På PC var det planlagt at elementene i utstillingen skulle ligge ved siden av hverandre, men bildet til venstre og tekst og lydknapper til høyre, med teksten øverst (skjermbilder av dette lenger opp i dokumentasjonen). 
 
+Da vi testet webløsningen med de forskjellige skjermstørrelsene var vi opptatt av at sideelementene skulle ligge der vi ønsket, at all funksjonalitet fungerte, at brukergrensesnittet var intuitivt og fint og at det var responsivt, altså at siden tilpasset seg når skjermens størrelse ble justert. Vi har også cross browser-testet webløsningen vår. Vi testet i Chrome, Firefox og Safari. Testingen gikk ut på å sjekke om siden vår så lik ut og hadde lik funksjonalitet i de ulike nettleserne. Det har den.  
 
 <a name="kilder"></a>
 ## Kilder
