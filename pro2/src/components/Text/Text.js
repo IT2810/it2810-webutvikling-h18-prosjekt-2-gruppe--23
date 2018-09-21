@@ -31,10 +31,10 @@ class Text extends Component {
     //Function checking if file is in session storage, if it is not, it loads and saves the new file to session
     //storage. If the file is in session storage already, the file is retrieved from here.
     async getText() {
-          if(sessionStorage.getItem('/TextFiles/' + this.props.category + "/" + this.props.tabnr + '.json') === null){
+          if(sessionStorage.getItem('TextFiles/' + this.props.category + "/" + this.props.tabnr + '.json') === null){
               try {
-              const text = await axios.get('/TextFiles/' + this.props.category + "/" + this.props.tabnr + '.json');
-              sessionStorage.setItem('/TextFiles/' + this.props.category + "/" + this.props.tabnr + '.json', text.data.text)
+              const text = await axios.get('TextFiles/' + this.props.category + "/" + this.props.tabnr + '.json');
+              sessionStorage.setItem('TextFiles/' + this.props.category + "/" + this.props.tabnr + '.json', text.data.text)
               this.setState({
                   texts: text.data.text
               })
@@ -43,7 +43,7 @@ class Text extends Component {
               console.error(error);
           }} else{
               this.setState({
-                      texts: sessionStorage.getItem('/TextFiles/' + this.props.category + "/" + this.props.tabnr + '.json')
+                      texts: sessionStorage.getItem('TextFiles/' + this.props.category + "/" + this.props.tabnr + '.json')
               })
           }
 
